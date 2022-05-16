@@ -1,0 +1,123 @@
+.container {
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 2%;
+    /* background-image: url("./img/bkground.jpg"); */
+
+}
+
+#left{
+    justify-self: left;
+    max-width: 25%;
+}
+#logo {
+    width: 100%;
+    height: 60px;
+}
+
+#right {
+    display: flex;
+    justify-content: space-between;
+    justify-self: end;
+}
+
+
+#logout-div {
+    display: none;
+}
+
+#errormessage {
+    color: red;
+}
+
+#search{
+    display: none;
+    justify-self: center !important;
+    width: 40%;
+}
+
+#content{
+    display: none;
+}
+
+audio{
+    width: 100%;
+}
+
+audio::-webkit-media-controls-seek-back-button{
+    display: block;
+}
+audio::-webkit-media-controls-seek {
+    display: block;
+}
+
+#audioForm{
+    display: flex;
+}
+
+body{
+    background-color: rgb(251, 171, 145);
+    background-image: url("/music-client/img/bkground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+#welcomePage{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#leftCarousel{
+    width: 30%;
+}
+
+#leftCarousel .carousel-item img{
+    object-fit:contain;
+    object-position: center;
+    overflow: hidden;
+    height: 60vh;
+}
+
+#rightCarousel .carousel-item img{
+    object-fit:contain;
+    object-position: center;
+    overflow: hidden;
+    height: 60vh;
+
+}
+#rightCarousel{
+    width: 30%;
+}
+
+
+#welcomeText{
+    object-fit:contain;
+    object-position: center;
+    color: aliceblue;
+    width: 40%;
+    height: 60vh;
+}
+
+@media only screen and (max-width: 600px) {
+    #rightCarousel{
+        display: none;
+    }
+    #leftCarousel{
+        display: none;
+    }
+    #welcomeText{
+        justify-self: center;
+    }
+  }

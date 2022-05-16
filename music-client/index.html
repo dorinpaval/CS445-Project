@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StelPav Music</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/979be5af78.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./main.css" rel="stylesheet" type="text/css" />
+    <script src="./main.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <div id="left"><img id="logo" src="./img/logoMusic.png"></div>
+        <div id="search">
+            <input placeholder="Search a song" id="search-input" class="border rounded border-danger"
+                style="width: 75%;height: 35px; border: 2px solid rgb(210, 3, 3) !important;">
+            <button onclick="searchSong()" class="btn btn-danger">Search</button>
+        </div>
+        <div id="right">
+            <div id="login-div">
+                <input id="username" placeholder="username" class="border rounded border-danger">
+                <input id="password" placeholder="password" class="border rounded border-danger" type="password">
+                <button class="btn btn-danger" id="loginBtn">Login</button>
+                <div id="errormessage"></div>
+            </div>
+            <div id="logout-div">
+                <button class="btn btn-danger" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div id="welcomePage">
+        <div id="leftCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./img/carousel1.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/carousel2.png"  alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/carousel3.png"  alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./img/carousel4.png" alt="Third slide">
+                </div>
+            </div>
+        </div>
+
+        <div id="welcomeText">
+           
+            <img src="/music-client/img/welcomeText.png" style="width: 100%;">
+
+        </div>
+        <div id="rightCarousel">
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./img/carousel2.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/carousel3.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/carousel4.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/carousel1.png" alt="Third slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container" id="content">
+        <div id="songsList">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col"> </th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyAll">
+
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div id="playlist">
+            Your Playlist:
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col"> </th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Release Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyPlaylist">
+
+                </tbody>
+            </table>
+
+        </div>
+        <div id="audioForm">
+            <button>Next</button>
+            <button>Previous</button>
+            <audio controls>
+                <source src="../music-server/src/songs/bad_romance.mp3">
+                <source src="../music-server/src/songs/in_the_end.mp3">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
