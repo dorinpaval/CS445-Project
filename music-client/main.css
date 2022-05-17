@@ -11,7 +11,6 @@
     /* background-image: url("./img/bkground.jpg"); */
 
 }
-
 #left{
     justify-self: left;
     max-width: 25%;
@@ -43,22 +42,10 @@
 }
 
 #content{
-    display: none;
-}
-
-audio{
-    width: 100%;
-}
-
-audio::-webkit-media-controls-seek-back-button{
-    display: block;
-}
-audio::-webkit-media-controls-seek {
-    display: block;
-}
-
-#audioForm{
+    width: 100% !important;
+    justify-content: space-around;
     display: flex;
+    flex-wrap: wrap;
 }
 
 body{
@@ -72,7 +59,7 @@ body{
 
 #welcomePage{
     margin-top: 2%;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     flex-basis: auto;
     flex-direction: row;
@@ -120,4 +107,20 @@ body{
     #welcomeText{
         justify-self: center;
     }
+  }
+
+
+  #audioForm{
+      border-radius: 15px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+      flex-direction: row;
+  }
+
+  button{
+      background: none;
+      border: 0px;
+      
   }

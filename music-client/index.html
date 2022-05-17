@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
     <title>StelPav Music</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/979be5af78.js" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -47,10 +54,10 @@
                     <img class="d-block w-100" src="./img/carousel1.png" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/carousel2.png"  alt="Second slide">
+                    <img class="d-block w-100" src="./img/carousel2.png" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/carousel3.png"  alt="Third slide">
+                    <img class="d-block w-100" src="./img/carousel3.png" alt="Third slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="./img/carousel4.png" alt="Third slide">
@@ -59,7 +66,7 @@
         </div>
 
         <div id="welcomeText">
-           
+
             <img src="/music-client/img/welcomeText.png" style="width: 100%;">
 
         </div>
@@ -83,9 +90,12 @@
         </div>
 
     </div>
-    <div class="container" id="content">
+    <div id="content">
         <div id="songsList">
-            <table class="table table-hover table-dark">
+            <h2
+                style="color: rgb(207, 248, 255) ; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                The list of all songs:</h2>
+            <table style="width: 40vw;" class="table table-hover table-dark">
                 <thead>
                     <tr>
                         <th scope="col"> </th>
@@ -99,15 +109,15 @@
                 </tbody>
             </table>
         </div>
-        <br>
         <div id="playlist">
-            Your Playlist:
-            <table class="table table-hover table-dark">
+            <h2
+                style="color: rgb(207, 248, 235) ; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Your Playlist:</h2>
+            <table style="width: 30vw;" class="table table-hover table-dark">
                 <thead>
                     <tr>
                         <th scope="col"> </th>
                         <th scope="col">Title</th>
-                        <th scope="col">Release Date</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -116,15 +126,15 @@
                 </tbody>
             </table>
 
-        </div>
-        <div id="audioForm">
-            <button>Next</button>
-            <button>Previous</button>
-            <audio controls>
-                <source src="../music-server/src/songs/bad_romance.mp3">
-                <source src="../music-server/src/songs/in_the_end.mp3">
-                Your browser does not support the audio tag.
-            </audio>
+            <p id='paragraph' style="text-align: center; color:orange"></p>
+            <div id="audioForm">
+                <button ><i class="fa-solid fa-backward"></i></button>
+   <audio  controls autoplay>
+   <source type="audio/mpeg">
+</audio> 
+<button ><i class="fa-solid fa-forward"></i></button> 
+<button ><i class="fa-solid fa-arrows-rotate"></i></button>
+            </div>
         </div>
     </div>
 
